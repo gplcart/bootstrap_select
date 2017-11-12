@@ -1,0 +1,14 @@
+{
+    "name": "Bootstrap Select",
+    "core": "1.x",
+    "author": "Iurii Makukh <gplcart.software@gmail.com>",
+    "license": "GPL-3.0+",
+    "version": "1.0.0-dev",
+    "description": "Integrates Bootstrap Select plugin",
+    "configure": "admin/module/settings/bootstrap_select",
+    "settings": {
+        "selector": [
+            "select"
+        ]
+    }
+}

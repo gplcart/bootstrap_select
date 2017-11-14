@@ -26,6 +26,8 @@ class BootstrapSelect extends Module
         parent::__construct($config);
     }
 
+    /* -------------------------- Hooks -------------------------- */
+
     /**
      * Implements hook "library.list"
      * @param array $libraries
@@ -108,6 +110,8 @@ class BootstrapSelect extends Module
     {
         $this->getLibrary()->clearCache();
     }
+
+    /* -------------------------- API -------------------------- */
 
     /**
      * Add Bootstrap Select library and additional assets

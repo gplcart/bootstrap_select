@@ -9,7 +9,6 @@
 
 namespace gplcart\modules\bootstrap_select\controllers;
 
-use gplcart\core\models\Module as ModuleModel;
 use gplcart\core\controllers\backend\Controller as BackendController;
 
 /**
@@ -19,19 +18,11 @@ class Settings extends BackendController
 {
 
     /**
-     * Module model instance
-     * @var \gplcart\core\models\Module $module
+     * Constructor
      */
-    protected $module;
-
-    /**
-     * @param ModuleModel $module
-     */
-    public function __construct(ModuleModel $module)
+    public function __construct()
     {
         parent::__construct();
-
-        $this->module = $module;
     }
 
     /**
@@ -53,7 +44,7 @@ class Settings extends BackendController
      */
     protected function setDataModuleSettings()
     {
-        $settings = $this->config->getFromModule('bootstrap_select');
+        $settings = $this->module->getSettings('bootstrap_select');
         $settings['selector'] = implode("\n", $settings['selector']);
         $this->setData('settings', $settings);
     }

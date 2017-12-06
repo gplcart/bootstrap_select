@@ -9,24 +9,36 @@
 
 namespace gplcart\modules\bootstrap_select;
 
-use gplcart\core\Module,
-    gplcart\core\Config;
+use gplcart\core\Library,
+    gplcart\core\Module;
 
 /**
  * Main class for Bootstrap Select module
  */
-class BootstrapSelect extends Module
+class BootstrapSelect
 {
 
     /**
-     * @param Config $config
+     * Module class instance
+     * @var \gplcart\core\Module $module
      */
-    public function __construct(Config $config)
-    {
-        parent::__construct($config);
-    }
+    protected $module;
 
-    /* -------------------------- Hooks -------------------------- */
+    /**
+     * Library class instance
+     * @var \gplcart\core\Library $library
+     */
+    protected $library;
+
+    /**
+     * @param Module $module
+     * @param Library $library
+     */
+    public function __construct(Module $module, Library $library)
+    {
+        $this->module = $module;
+        $this->library = $library;
+    }
 
     /**
      * Implements hook "library.list"
@@ -84,7 +96,7 @@ class BootstrapSelect extends Module
      */
     public function hookModuleEnableAfter()
     {
-        $this->getLibrary()->clearCache();
+        $this->library->clearCache();
     }
 
     /**
@@ -92,7 +104,7 @@ class BootstrapSelect extends Module
      */
     public function hookModuleDisableAfter()
     {
-        $this->getLibrary()->clearCache();
+        $this->library->clearCache();
     }
 
     /**
@@ -100,7 +112,7 @@ class BootstrapSelect extends Module
      */
     public function hookModuleInstallAfter()
     {
-        $this->getLibrary()->clearCache();
+        $this->library->clearCache();
     }
 
     /**
@@ -108,10 +120,8 @@ class BootstrapSelect extends Module
      */
     public function hookModuleUninstallAfter()
     {
-        $this->getLibrary()->clearCache();
+        $this->library->clearCache();
     }
-
-    /* -------------------------- API -------------------------- */
 
     /**
      * Add Bootstrap Select library and additional assets
@@ -119,12 +129,11 @@ class BootstrapSelect extends Module
      */
     public function addLibrary($controller)
     {
-        $settings = $this->config->getFromModule('bootstrap_select');
-        $controller->setJsSettings('bootstrap_select', $settings);
+        $settings = $this->module->getSettings('bootstrap_select');
 
-        $options = array('aggregate' => false);
-        $controller->addAssetLibrary('bootstrap_select', $options);
-        $controller->setJs('system/modules/bootstrap_select/js/common.js', $options);
+        $controller->setJsSettings('bootstrap_select', $settings);
+        $controller->addAssetLibrary('bootstrap_select');
+        $controller->setJs('system/modules/bootstrap_select/js/common.js');
     }
 
 }

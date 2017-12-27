@@ -9,13 +9,13 @@
 
 namespace gplcart\modules\bootstrap_select;
 
-use gplcart\core\Library,
-    gplcart\core\Module;
+use gplcart\core\Module as CoreModule,
+    gplcart\core\Library;
 
 /**
  * Main class for Bootstrap Select module
  */
-class BootstrapSelect
+class Module
 {
 
     /**
@@ -31,10 +31,10 @@ class BootstrapSelect
     protected $library;
 
     /**
-     * @param Module $module
+     * @param CoreModule $module
      * @param Library $library
      */
-    public function __construct(Module $module, Library $library)
+    public function __construct(CoreModule $module, Library $library)
     {
         $this->module = $module;
         $this->library = $library;

@@ -1,12 +1,18 @@
 {
-    "name": "gplcart/bootstrap_select",
-    "type": "gplcart-module",
-    "description": "Integrates Bootstrap Select plugin",
-    "keywords": ["gplcart", "ecommerce", "shopping cart", "gplcart module", "php"],
-    "license": "GPL-3.0+",
-    "require": {
-        "gplcart/composer-module-installer": "*"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "gplcart/bootstrap_select",
+  "type": "gplcart-module",
+  "description": "Integrates Bootstrap Select plugin",
+  "keywords": [
+    "gplcart",
+    "ecommerce",
+    "shopping cart",
+    "gplcart module",
+    "php"
+  ],
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "gplcart/composer-module-installer": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

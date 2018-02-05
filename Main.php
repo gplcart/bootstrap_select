@@ -47,8 +47,8 @@ class Main
     public function hookLibraryList(array &$libraries)
     {
         $libraries['bootstrap_select'] = array(
-            'name' => /* @text */'Bootstrap Select',
-            'description' => /* @text */"A jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements",
+            'name' => 'Bootstrap Select', // @text
+            'description' => "A jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements", // @text
             'type' => 'asset',
             'module' => 'bootstrap_select',
             'url' => 'https://github.com/silviomoreto/bootstrap-select',

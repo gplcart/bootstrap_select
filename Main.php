@@ -9,8 +9,8 @@
 
 namespace gplcart\modules\bootstrap_select;
 
-use gplcart\core\Module,
-    gplcart\core\Library;
+use gplcart\core\Library;
+use gplcart\core\Module;
 
 /**
  * Main class for Bootstrap Select module

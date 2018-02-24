@@ -9,21 +9,13 @@
 
 namespace gplcart\modules\bootstrap_select\controllers;
 
-use gplcart\core\controllers\backend\Controller as BackendController;
+use gplcart\core\controllers\backend\Controller;
 
 /**
  * Handles incoming requests and outputs data related to Bootstrap Select module
  */
-class Settings extends BackendController
+class Settings extends Controller
 {
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
     /**
      * Route page callback to display the module settings page
@@ -32,9 +24,7 @@ class Settings extends BackendController
     {
         $this->setTitleEditSettings();
         $this->setBreadcrumbEditSettings();
-
         $this->setDataModuleSettings();
-
         $this->submitSettings();
         $this->outputEditSettings();
     }
@@ -54,8 +44,7 @@ class Settings extends BackendController
      */
     protected function setTitleEditSettings()
     {
-        $vars = array('%name' => $this->text('Bootstrap Select'));
-        $title = $this->text('Edit %name settings', $vars);
+        $title = $this->text('Edit %name settings', array('%name' => $this->text('Bootstrap Select')));
         $this->setTitle($title);
     }
 
@@ -113,6 +102,7 @@ class Settings extends BackendController
     protected function updateSettings()
     {
         $this->controlAccess('module_edit');
+
         $this->module->setSettings('bootstrap_select', $this->getSubmitted());
         $this->redirect('', $this->text('Settings have been updated'), 'success');
     }

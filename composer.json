@@ -11,12 +11,15 @@
   ],
   "license": "GPL-3.0-or-later",
   "require": {
-    "gplcart/composer-module-installer": "*",
+    "gplcart/composer-module-installer": "dev-master",
     "assets/bootstrap_select": "1.12.1"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "repositories": [
     {
       "type": "package",
+      "packagist": false,
       "packagist.org": false,
       "package": {
         "name": "assets/bootstrap_select",

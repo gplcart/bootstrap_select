@@ -19,7 +19,6 @@
   "repositories": [
     {
       "type": "package",
-      "packagist": false,
       "packagist.org": false,
       "package": {
         "name": "assets/bootstrap_select",

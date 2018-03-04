@@ -11,6 +11,7 @@
   ],
   "license": "GPL-3.0-or-later",
   "require": {
+    "gplcart/composer-module-installer": "*",
     "assets/bootstrap_select": "1.12.1"
   },
   "repositories": [

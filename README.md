@@ -5,9 +5,8 @@ Bootstrap Select is a [GPL Cart](https://github.com/gplcart/gplcart) module that
 
 **Installation**
 
-This module requires 3-d party library which should be downloaded separately. You have to use [Composer](https://getcomposer.org) to download all the dependencies. From your web root directory execute the following command: `composer require gplcart/bootstrap_select`
+This module requires 3-d party library which should be downloaded separately. You have to use [Composer](https://getcomposer.org) to download all the dependencies.
 
-Then:
-
-1. Go to `admin/module/list` end enable the module
-2. Adjust settings at `admin/module/settings/bootstrap_select`
+1. From your web root directory: `composer require gplcart/bootstrap_select`
+2. Go to `admin/module/list` end enable the module
+3. Adjust settings at `admin/module/settings/bootstrap_select`

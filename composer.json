@@ -14,8 +14,6 @@
     "gplcart/composer-module-installer": "*",
     "assets/bootstrap_select": "*"
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "repositories": [
     {
       "type": "package",

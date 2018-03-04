@@ -54,12 +54,12 @@ class Main
             'url' => 'https://github.com/silviomoreto/bootstrap-select',
             'download' => 'https://github.com/silviomoreto/bootstrap-select/archive/v1.12.1.zip',
             'version_source' => array(
-                'file' => 'vendor/bootstrap_select/dist/js/bootstrap-select.min.js',
+                'file' => 'dist/js/bootstrap-select.min.js',
                 'pattern' => '/v(\\d+\\.+\\d+\\.+\\d+)/',
             ),
             'files' => array(
-                'vendor/bootstrap_select/dist/js/bootstrap-select.min.js',
-                'vendor/bootstrap_select/dist/css/bootstrap-select.min.css',
+                'dist/js/bootstrap-select.min.js',
+                'dist/css/bootstrap-select.min.css',
             ),
             'dependencies' => array(
                 'jquery' => '>= 1.8',

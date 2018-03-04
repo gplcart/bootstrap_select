@@ -11,8 +11,23 @@
   ],
   "license": "GPL-3.0-or-later",
   "require": {
-    "gplcart/composer-module-installer": "*"
+    "gplcart/composer-module-installer": "*",
+    "assets/bootstrap_select": "1.12.1"
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "package",
+      "packagist.org": false,
+      "package": {
+        "name": "assets/bootstrap_select",
+        "version": "1.12.1",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/silviomoreto/bootstrap-select/archive/v1.12.1.zip"
+        }
+      }
+    }
+  ]
 }
